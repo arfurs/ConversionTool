@@ -12,19 +12,19 @@ class conversion{
         */
 	public function __construct($path){
 
-            if(!file_exists($path)){
-                die('请指定sql文件路径');
-            }else{
-                $nameArr = explode('.',$path);
-                $suffix = $nameArr[count($nameArr)-1];
-                if($suffix != 'sql'){
-                    die('该文件不是sql文件');
-                }
-            }
-
-			$this->sqlFile = file_get_contents($path);
-			$this->tableNameArr = $this->getTableName();
+		if(!file_exists($path)){
+			die('请指定sql文件路径');
+		}else{
+			$nameArr = explode('.',$path);
+			$suffix = $nameArr[count($nameArr)-1];
+			if($suffix != 'sql'){
+			    die('该文件不是sql文件');
+			}
 		}
+
+		$this->sqlFile = file_get_contents($path);
+		$this->tableNameArr = $this->getTableName();
+	}
 
         /**
          * 获取当前sql文件中的所有表名称

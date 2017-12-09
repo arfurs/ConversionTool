@@ -68,7 +68,7 @@ class conversion{
 	}
 
         /**
-         * 处理成markdown形式的
+         * 字段处理
          * @param $structure 字符串形式的表结构
          * @return array 由字段组成的数组
          */

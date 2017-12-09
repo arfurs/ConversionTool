@@ -26,9 +26,9 @@
 
 				echo "<br />";
 
-				// 输出表引擎以及表字符集
 			}
-
+			
+			// 输出表引擎以及表字符集
 			echo "存储引擎：".$v['tableInfo']['engine'].' &nbsp;字符集：'.$v['tableInfo']['charset'];
 			echo "<hr /><br>";
 

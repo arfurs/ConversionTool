@@ -84,7 +84,7 @@ class conversion{
 			}else if(preg_match('/UNIQUE KEY/',$field)){
 			    $fieldArr['_unique'] = $res[1];
 			}else{
-			    $fieldArr[@$res[1]] = $this->checkFiledType($field);
+			    $fieldArr[@$res[1]] = $this->checkFieldType($field);
 			}
            	 }
             	return $fieldArr;
@@ -95,7 +95,7 @@ class conversion{
          * @param $filedStr 字段的一整行字符串 包括字段类型 约束条件 是否为空等条件在内的一个字符串
          * @reutrn array 处理完后的数据
          */
-	public function checkFiledType($fieldStr){
+	public function checkFieldType($fieldStr){
 
             $field_arr = array();
 
